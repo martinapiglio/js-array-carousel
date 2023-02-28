@@ -1,0 +1,32 @@
+/* common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* /common */
+
+.container #slider {
+    display: flex;
+    align-items: center;
+    
+    position: relative;
+
+    height: 320px;
+    overflow: hidden;
+  }
+  
+.container #slider .arrow {
+    position: absolute;
+    color: white;
+  }
+  
+.container #slider .arrow#arrow-down {
+    bottom: 10px;
+    left: 50%;
+  }
+
+.container #slider .arrow#arrow-up {
+    top: 10px;
+    left: 50%;
+  }
