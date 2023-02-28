@@ -26,17 +26,37 @@ activeImg.src = images[index];
 //ARROW CLICK UP
 arrowUp.addEventListener("click", function() {
 
+    if (index < images.length - 1) {
+
         index++;
 
         activeImg.src = images[index];
+
+    } else {
+
+        index = 0;
+
+        activeImg.src = images[index];
+
+    }
     
 });
 
 //ARROW CLICK DOWN
 arrowDown.addEventListener("click", function() {
 
+    if (index > 0) {
+
         index--;
 
         activeImg.src = images[index];
+
+    } else {
+
+        index = images.length - 1 ;
+
+        activeImg.src = images[index];
+
+    }
     
 });
