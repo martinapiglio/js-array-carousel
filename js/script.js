@@ -6,10 +6,10 @@
     d - arrow-down from HTML;
     e - index variable to be set as 0;
 2 - set the src parameter as the first img from the array (variable a);
-3 - button click UP: create an IF condition -->
+3 - arrow click UP: create an IF condition -->
     a - IF (index < ( img array lenght - 1)), THEN index+1 and show next img;
     b - ELSE set again index = 0 and restar img visualization;
-4 - button click DOWN: same as no.3 but on the other way round;
+4 - arrow click DOWN: same as no.3 but on the other way round;
 */
 
 // VARIABLES:
@@ -19,3 +19,6 @@ const arrowUp = document.getElementById('arrow-up');
 const arrowDown = document.getElementById('arrow-down');
 
 let index = 0;
+
+//SET IMG SRC EQUAL TO FIRST IMG FROM THE ARRAY:
+activeImg.src = images[index];
