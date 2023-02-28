@@ -18,6 +18,8 @@ const activeImg = document.getElementById('active-img');
 const arrowUp = document.getElementById('arrow-up');
 const arrowDown = document.getElementById('arrow-down');
 
+const thumbnailContainer = document.getElementById('thumbnail');
+
 let index = 0;
 
 //SET IMG SRC EQUAL TO FIRST IMG FROM THE ARRAY:
