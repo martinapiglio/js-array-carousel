@@ -19,6 +19,7 @@
 .container #slider .arrow {
     position: absolute;
     color: white;
+    cursor: pointer;
   }
   
 .container #slider .arrow#arrow-down {

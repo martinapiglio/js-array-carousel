@@ -22,3 +22,21 @@ let index = 0;
 
 //SET IMG SRC EQUAL TO FIRST IMG FROM THE ARRAY:
 activeImg.src = images[index];
+
+//ARROW CLICK UP
+arrowUp.addEventListener("click", function() {
+
+        index++;
+
+        activeImg.src = images[index];
+    
+});
+
+//ARROW CLICK DOWN
+arrowDown.addEventListener("click", function() {
+
+        index--;
+
+        activeImg.src = images[index];
+    
+});
