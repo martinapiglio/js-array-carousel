@@ -32,15 +32,13 @@ arrowUp.addEventListener("click", function() {
 
         index++;
 
-        activeImg.src = images[index];
-
     } else {
 
         index = 0;
 
-        activeImg.src = images[index];
+    };
 
-    }
+    activeImg.src = images[index];
     
 });
 
@@ -51,14 +49,12 @@ arrowDown.addEventListener("click", function() {
 
         index--;
 
-        activeImg.src = images[index];
-
     } else {
 
         index = images.length - 1 ;
 
-        activeImg.src = images[index];
+    };
 
-    }
+    activeImg.src = images[index];
     
 });
