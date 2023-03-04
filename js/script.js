@@ -18,15 +18,35 @@ const activeImg = document.getElementById('active-img');
 const arrowUp = document.getElementById('arrow-up');
 const arrowDown = document.getElementById('arrow-down');
 
-const thumbnailContainer = document.getElementById('thumbnail');
+const thumbnailContainer = document.getElementById('thumbnails');
 
 let index = 0;
 
 //SET IMG SRC EQUAL TO FIRST IMG FROM THE ARRAY:
 activeImg.src = images[index];
 
+//BONUS 2
+for (let i = 0; i < images.length; i++) {
+
+    let newThumbnail = document.createElement('img');
+
+    newThumbnail.src = images[i];
+    newThumbnail.style.height = "calc(100% / " + images.length + ")";
+
+    newThumbnail.classList.add("thumbnail");
+
+    thumbnailContainer.append(newThumbnail);
+
+}
+
+const thumbnailEl = document.querySelectorAll('.container #thumbnails .thumbnail');
+
+thumbnailEl[index].classList.add("active");
+
 //ARROW CLICK UP
-arrowUp.addEventListener("click", function() {
+arrowDown.addEventListener("click", function() {
+
+    thumbnailEl[index].classList.remove("active");
 
     if (index < images.length - 1) {
 
@@ -39,11 +59,15 @@ arrowUp.addEventListener("click", function() {
     };
 
     activeImg.src = images[index];
+
+    thumbnailEl[index].classList.add("active");
     
 });
 
 //ARROW CLICK DOWN
-arrowDown.addEventListener("click", function() {
+arrowUp.addEventListener("click", function() {
+
+    thumbnailEl[index].classList.remove("active");
 
     if (index > 0) {
 
@@ -56,5 +80,8 @@ arrowDown.addEventListener("click", function() {
     };
 
     activeImg.src = images[index];
+
+    thumbnailEl[index].classList.add("active");
     
 });
+
